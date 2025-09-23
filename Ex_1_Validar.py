@@ -20,8 +20,8 @@ def validar_nome_simples():
                     valido = False
                     return
                 encontrou_espaco = False # Para o próximo potencial espaço
-            else: # Outras letras (minúsculas permitidas)
-                if not (97 <= ascii_val <= 122) and not (char == ' '): # Verifica se é uma letra minúscula (a-z) ou um espaço
+            else: # Outras letras do primeiro ou segundo nome (inclui minúsculas)
+                if not (97 <= ascii_val <= 122) and not (char == ' '):  # Verifica se é uma letra (a-z) ou espaço
                     print("Nome inválido: contém caracteres não permitidos.")
                     valido = False
                     return
