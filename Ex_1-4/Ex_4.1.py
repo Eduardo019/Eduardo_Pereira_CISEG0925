@@ -19,4 +19,3 @@ for i in range(len(listaNome)-1):
             listaNome[i], listaNome[j] = listaNome[j], listaNome[i]
 print(listaNome)
 print("".join(listaNome))  # Junta as palavras de volta em uma única string
-############################################################################

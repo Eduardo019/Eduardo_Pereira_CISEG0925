@@ -11,7 +11,7 @@ def criptografar(mensagem, chave):
     for char in mensagem:
         codigo = ord(char)
         
-        # Se for um caractere "imprimível" (de espaço a ~), usa rotação.
+        # Se for um caractere "imprimível", usa rotação.
         if 32 <= codigo <= 126:
             posicao = codigo - 32
             nova_posicao = (posicao + chave_numerica) % 95
@@ -19,7 +19,7 @@ def criptografar(mensagem, chave):
             # Guarda o código e a informação de que foi rotacionado (True)
             dados_criptografados.append((novo_codigo, True))
         else:
-            # Para outros caracteres (com acentos, etc.), apenas soma.
+            # Para outros caracteres, apenas soma.
             novo_codigo = codigo + chave_numerica
             # Guarda o código e a informação de que não foi rotacionado (False)
             dados_criptografados.append((novo_codigo, False))
